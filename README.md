@@ -1,3 +1,3 @@
 https://react-calculator-gzzd.vercel.app/
-https://github.com/sharonsanjana/react-calculator
+github https://github.com/sharonsanjana/react-calculator
 
