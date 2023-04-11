@@ -6,7 +6,7 @@ export class RickAndMorty extends Component {
     super(props)
   
     this.state = {
-       posts : [] ,
+       charac : [] ,
        errorMessage : ''
     }
   }
@@ -14,12 +14,25 @@ export class RickAndMorty extends Component {
   componentDidMount() {
     axios.get("https://rickandmortyapi.com/api/character")
     .then(response => {
-      console.log(response)
+      this.setState({charac : response.data.results})
+      console.log( response.data.results)
     })
   }
   render() {
+    const {charac, errorMessage} = this.state;
     return (
-      <div>RickAndMorty</div>
+      <React.Fragment>
+        Rick and Morty 
+        {
+          charac.length 
+          ? charac.map(chara => (
+            <div id ={chara.id}>
+              <b>{chara.name}</b>
+              <img src = {chara.image}></img>
+            </div>
+          )) : null
+        }
+      </React.Fragment>
     )
   }
 }
