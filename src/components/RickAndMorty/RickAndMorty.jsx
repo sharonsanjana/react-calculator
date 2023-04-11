@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
+import "./RickAndMorty.css"
 export class RickAndMorty extends Component {
   constructor(props) {
     super(props)
@@ -23,15 +23,17 @@ export class RickAndMorty extends Component {
     return (
       <React.Fragment>
         Rick and Morty 
-        {
+       <div className="grid-container">
+       {
           charac.length 
           ? charac.map(chara => (
-            <div id ={chara.id}>
+            <div  className="element" key ={chara.id}>
               <b>{chara.name}</b>
               <img src = {chara.image}></img>
             </div>
           )) : null
         }
+       </div>
       </React.Fragment>
     )
   }

@@ -1,4 +1,5 @@
 import React from 'react'
+import myImage from './img.jpeg'
 
 function Home() {
   return (
@@ -10,7 +11,7 @@ function Home() {
 		<div class="profile">
 			<div class="profile_container">
 				<div class="profile_img">
-					<img src="src/components/Home/WhatsApp Image 2023-03-19 at 7.51.45 PM.jpeg" alt="sharon Sanjana"></img>
+					<img src={myImage} alt="sharon Sanjana"></img>
 				</div>
 			</div>
 			<div class="namendes">
